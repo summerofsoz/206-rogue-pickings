@@ -1,4 +1,4 @@
-/* Mobble is gobble */
+/* MOBILE IS GOD */
 
 @font-face{
 	font-family: 'Wisdom Script';
@@ -17,30 +17,13 @@ body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
+
 .container {
+	width: 90%;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	flex-direction: column;
-}
-
-.top-section {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-}
-
-.bottom-section {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-footer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex-flow: row wrap;
 }
 
 
@@ -67,11 +50,11 @@ h4 {
 
 p {
 	font-size: 0.875em;
-	line-height: 21px;
-  padding: 0 30px;
+	line-height: 1.3125em;
+  
 }
 
-/* header */
+/* HEADER SECTION BEGINS */
 
 header {
 	display: flex;
@@ -81,7 +64,6 @@ header {
 }
 
 header h1 {
-	float: left;
 	margin: 0;
 	padding: 0;
 }
@@ -102,56 +84,56 @@ header nav ul {
 	padding: 0;
 }
 header nav ul li {
-	text-transform: uppercase;
+	font-size: 0.875em;
 	font-weight: 700;
-	font-size: 14px;
+	list-style: none;
 	padding: 16px 0;
-	display: inline;
+	text-transform: uppercase;
 }
+
 header nav ul li a{
 	text-decoration: none;
 	color:#77a466;
 }
 
-/* End Header */
+/*END OF HEADER SECTION */
 
 /*The widths are in a percentage!*/
+
 .top-section,
 .bottom-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	margin: 0 auto;
-	clear: both;
 }
 
 .main-image {
 	height: auto;
-	float: left;
 }
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
-.main-title {
-	height: auto;
-	float: left;
-}
 .main-title h3 {
-	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1em;
+	line-height: 1.7em;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
-	float: left;
 	border-top: 1px solid #eee;
 }
 
@@ -159,17 +141,11 @@ header nav ul li a{
 	padding: 10px 0;
 }
 
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
-}
 
 .menu {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
 	list-style: none;
 	padding: 0;
 }
@@ -180,51 +156,71 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
-	line-height: 21px;
+	font-size: 1em;
+	line-height: 1.3125em;
 }
 
 .address {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1em;
+	line-height: 1.5em;
 }
 
 /*The widths are in a percentage!*/
+
 footer {
-	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3.125em;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
 	text-align: center;
 }
+
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875em;
 }
 
 
-/* TABLET */
+/* TABLET STYLES */
 
-@media (min-width: 768px) and (max-width: 1024px){
-	/* between 601px and 700px */
-			body{
-					background:purple;
-			}
+@media all and (min-width: 768px){
+	
+	.bottom-section {
+		flex-direction: row;
+		align-items: flex-start;
 	}
 
-/* DESKTOP */
+	.section-two h4,
+	.section-three h4 {
+		padding: 10px 30px;
+	}
 
-@media (min-width: 1025px) {
-	/* between 601px and 700px */
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+	p {
+		padding: 0 30px;
+	}
+
+}
+
+
+/* DESKTOP STYLES */
+
+@media all and (min-width: 1200px) {
 	
 	.container{
 		max-width: 1200px;
 		margin: 0 auto;
 	}
 	
-/* HEADER */
+/* HEADER SECTION BEGINS */
 
 	/*The widths are in a percentage!*/
 	header {
@@ -236,127 +232,27 @@ footer span {
 		width: 100%;
 	}
 	
-	header h1 {
-		float: left;
-		margin: 0;
-		padding: 38px 0;
-	}
-	
-	header h1 span {
-		color: #77a466;
-	}
-	
-	header nav {
-		padding: 46px 0; 
-	}
-	
 	header nav ul{
 		flex-direction: row;
-		margin: 0;
-		padding: 0;
 	}
 	
 	header nav ul li {
-		display: inline;
-		font-size: 14px;
-		font-weight: 700;
 		padding: 0 10px;
-		text-transform: uppercase;
+		
 	}
 	
-	header nav ul li a {
-		color: #77a466;
-		text-decoration: none;
-	}
-	
-/* HEADER ENDS */
+/* HEADER SECTION ENDS */
 
 	/*The widths are in a percentage!*/
 	.top-section,
 	.bottom-section {
 		margin: 0 auto;
-		clear: both;
-	}
-	
-	.main-image {
-		height: auto;
-		float: left;
-	}
-	.main-image img {
-		width: 100%;
-		border-bottom: 3px solid #77a466;
-	}
-	
-	.main-title {
-		height: auto;
-		float: left;
-	}
-	.main-title h3 {
-		text-align: left;
-		padding: 5px 0;
-		color: #77a466;
-	}
-	.main-title p {
-		padding: 0;
-		font-size: 16px;
-		line-height: 25px;
 	}
 	
 	.section-one,
 	.section-two,
 	.section-three {
 		width: 33%;
-		height: auto;
-		float: left;
-		border-top: 1px solid #eee;
 	}
 	
-	.section-one h4 {
-		padding: 10px 0;
-	}
-	
-	.section-two {
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
-	}
-	
-	.section-two h4,
-	.section-three h4 {
-		padding: 10px 30px;
-	}
-	
-	.menu {
-		list-style: none;
-		padding: 0;
-	}
-	.menu li {
-		padding: 10px 0;
-		color:#77a466;
-	}
-	
-	.reviews {
-		color: #333;
-		font-size: 16px;
-		line-height: 21px;
-	}
-	
-	.address {
-		font-size: 16px;
-		line-height: 24px;
-	}
-	
-	/*The widths are in a percentage!*/
-	footer {
-		height: 50px;
-		border-top: 3px solid #eee;
-		margin: 0 auto;
-		clear: both;
-		text-align: center;
-	}
-	footer span {
-		font-family: 'Wisdom Script', cursive;
-		text-transform: lowercase;
-		color: #77a466;
-		font-size: 14px;
-	}
-	}
+}
